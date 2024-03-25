@@ -1,7 +1,7 @@
 
 
 
-.author, .book, .pages{
+.author, .title, .pages{
     display: flex   ;
     flex-direction: column;
     width: 200px;
@@ -18,10 +18,10 @@
 
 body{
     background: #3399ff;
-    overflow: hidden;
+    
   }
 
-  .title{
+  .header-title{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,6 +53,7 @@ p{
     display: flex;
     flex-direction: column;
     background-color: white;
+    flex-wrap: wrap;
     width: 25rem;
     height: 30rem;
     align-items: center;
@@ -66,12 +67,13 @@ p{
     display: block;
     display: flex;
     flex-direction: column;
-    background-color: hsl(0, 0%, 87%);
+    background-color: hsl(0, 0%, 97%);
     width: 25rem;
     height: 30rem;
     align-items: center;
     justify-content: start;
     border-radius: 25px ;
+    
    
 }
 
@@ -124,7 +126,7 @@ input{
     display: flex;
     gap: 1rem;
     margin-top: 3rem;
-    
+    border-radius: 15px;
 }
 
 .book-content{
@@ -137,6 +139,7 @@ input{
     align-items: center;
     z-index: 99;
     background-color: white;
+    border-radius: 15px;
 }
 
 h2{
