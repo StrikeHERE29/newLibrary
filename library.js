@@ -2,8 +2,8 @@ const myLibrary = [];
 
 let showFormBtn = document.querySelector(".addBook");
 let formContainer = document.querySelector(".form");
-let isRead = document.querySelector(".read");
-let deleteBook = document.querySelector(".delete");
+
+
 
 
 
@@ -58,15 +58,28 @@ function createBookElement(book) {
     <button class="read">Read</button>
     <button class="delete">Delete</button>
   `;
+  let isRead = newBookDiv.querySelector(".read");
+  let deleteBook = newBookDiv.querySelector(".delete");
 
+  deleteBook.addEventListener("click", function(){
+    newBookDiv.remove();
+  })
+
+  isRead.addEventListener("click", function(){
+    if(isRead.innerHTML === "Read"){
+      isRead.style.color = "red";
+      isRead.innerHTML = "Not Read"
+    }else{
+      isRead.style.color = "green";
+      isRead.innerHTML = "Read";
+    }
+    
+  })
   // Append the new book element to the book container
   bookContainer.appendChild(newBookDiv);
 }
 
 // Event listener for the "Add Book" button
 document.querySelector(".send").addEventListener("click", addBookToLibrary);
-
-
-
 
 
